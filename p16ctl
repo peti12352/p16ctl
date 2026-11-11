@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+from p16ctl import main
+
+raise SystemExit(main())

@@ -1,0 +1,12 @@
+[Unit]
+Description=ASUS ProArt P16 performance thermal policy
+After=multi-user.target
+ConditionPathExists=/proc/acpi/call
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/p16ctl performance --quiet
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

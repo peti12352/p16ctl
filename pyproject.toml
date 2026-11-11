@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p16ctl"
+version = "1.0.0"
+description = "ASUS ProArt P16 Linux performance thermal mode"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+p16ctl = "p16ctl:main"
+
+[tool.setuptools]
+py-modules = ["p16ctl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
